@@ -1,5 +1,10 @@
 require 'rspec'
-require 'rspec-rails-mocha'
+require 'mocha_model'
+
+RSpec.configure do |config|
+  config.mock_with :mocha
+  config.include MochaModel
+end
 
 # Simple stub for ActiveRecord::Base
 module ActiveRecord
