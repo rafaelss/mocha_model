@@ -1,5 +1,7 @@
 source :rubygems
 
-gem 'rspec-rails'
+gemspec
+
 gem 'activesupport'
 gem 'mocha'
+
