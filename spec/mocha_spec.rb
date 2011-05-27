@@ -11,7 +11,7 @@ module ActiveRecord
   end
 end
 
-module RSpec::Rails
+module MochaModel
   # usually defined in "rspec/rails/mocks"
   class IllegalDataAccessException < StandardError; end
 end
@@ -105,8 +105,8 @@ describe "rspec-rails Mocha plugin" do
     it "can't connect" do
       lambda {
         create(Person).connection
-      }.should raise_error(RSpec::Rails::IllegalDataAccessException)
+      }.should raise_error(MochaModel::IllegalDataAccessException)
     end
   end
-  
 end
+
